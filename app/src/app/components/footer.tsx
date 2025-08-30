@@ -1,3 +1,5 @@
+import SocialIcon from "./social-icon";
+
 export default function Footer() {
   return (
     <footer
@@ -5,8 +7,8 @@ export default function Footer() {
         position: "fixed",
         left: 0,
         right: 0,
-        bottom: 0,
-        height: "48px",
+        bottom: "24px",
+        height: "64px",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -16,33 +18,15 @@ export default function Footer() {
         backdropFilter: "saturate(180%) blur(8px)",
       }}
     >
-      <a
-        href="https://www.linkedin.com/in/sawyer-middeleer/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="LinkedIn"
-        style={{ padding: "4px", opacity: 0.9 }}
-      >
-        <i className="fa-brands fa-linkedin fa-lg" />
-      </a>
-      <a
-        href="https://github.com/Sawyer-Middeleer"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="GitHub"
-        style={{ padding: "4px", opacity: 0.9 }}
-      >
-        <i className="fa-brands fa-github fa-lg" />
-      </a>
-      <a
-        href="https://x.com/sawyermidddd"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="X"
-        style={{ padding: "4px", opacity: 0.9 }}
-      >
-        <i className="fa-brands fa-x-twitter fa-lg" />
-      </a>
+      <SocialIcon href="https://www.linkedin.com/in/sawyer-middeleer/" label="LinkedIn">
+        <i className="fa-brands fa-linkedin fa-2xl" />
+      </SocialIcon>
+      <SocialIcon href="https://github.com/Sawyer-Middeleer" label="GitHub">
+        <i className="fa-brands fa-github fa-2xl" />
+      </SocialIcon>
+      <SocialIcon href="https://x.com/sawyermidddd" label="X">
+        <i className="fa-brands fa-x-twitter fa-2xl" />
+      </SocialIcon>
     </footer>
   );
 }
