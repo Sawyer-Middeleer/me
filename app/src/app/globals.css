@@ -25,3 +25,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   padding-bottom: 88px; /* space for fixed footer raised by 24px and 64px height */
 }
+
+.footer-social {
+  gap: 8rem;
+}
+
+@media (max-width: 767px) {
+  .footer-social {
+    gap: 3rem;
+  }
+}

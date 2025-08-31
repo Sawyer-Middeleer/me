@@ -3,6 +3,7 @@ import SocialIcon from "./social-icon";
 export default function Footer() {
   return (
     <footer
+      className="footer-social"
       style={{
         position: "fixed",
         left: 0,
@@ -12,7 +13,6 @@ export default function Footer() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        gap: "8rem",
         borderTop: "1px solid rgba(0,0,0,0.08)",
         background: "var(--background)",
         backdropFilter: "saturate(180%) blur(8px)",
