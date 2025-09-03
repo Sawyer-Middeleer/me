@@ -8,7 +8,7 @@ export default function Footer() {
         position: "fixed",
         left: 0,
         right: 0,
-        bottom: "24px",
+        bottom: "42px",
         height: "64px",
         display: "flex",
         alignItems: "center",
