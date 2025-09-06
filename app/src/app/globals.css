@@ -5,13 +5,6 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -23,7 +16,6 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  padding-bottom: 88px; /* space for fixed footer raised by 24px and 64px height */
 }
 
 .footer-social {
@@ -33,5 +25,37 @@ body {
 @media (max-width: 767px) {
   .footer-social {
     gap: 3rem;
+  }
+}
+
+/* Footer gradient animations */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradientFloat {
+  0%, 100% {
+    transform: translateX(0px) translateY(0px);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translateX(0px) translateY(0px);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(0px) translateY(0px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(0px) translateY(0px);
+    opacity: 0.65;
   }
 }
