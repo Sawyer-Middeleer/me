@@ -1,7 +1,12 @@
 "use client";
 
-import ResumeItem from "./content/resume-item";
-import resumeItems from "../content/work";
+import ExperienceItem from "./content/experience-item";
+import experienceItems from "../content/experience";
+import About from "./content/about";
+import CreationItem from "./content/creation-item";
+import creationItems from "../content/creations";
+import FeatureItem from "./content/feature-item";
+import featureItems from "../content/features";
 
 interface ContentBoxProps {
     selectedItem: string;
@@ -10,13 +15,13 @@ interface ContentBoxProps {
 export default function ContentBox({ selectedItem }: ContentBoxProps) {
     const getContent = () => {
         switch (selectedItem) {
-            case "work":
+            case "experience":
                 return {
-                    title: "Work",
+                    title: "Experience",
                     content: (
                         <div className="space-y-8">
-                            {resumeItems.map((item) => (
-                                <ResumeItem key={item.id} item={item} />
+                            {experienceItems.map((item) => (
+                                <ExperienceItem key={item.id} item={item} />
                             ))}
                         </div>
                     )
@@ -24,17 +29,34 @@ export default function ContentBox({ selectedItem }: ContentBoxProps) {
             case "creations":
                 return {
                     title: "Creations",
-                    content: "Explore my creative projects, designs, and artistic endeavors."
+                    content:  (
+                        <div className="space-y-8">
+                            {creationItems.map((item) => (
+                                <CreationItem key={item.id} item={item} />
+                            ))}
+                        </div>
+                    )
                 };
-            case "writing":
+            case "features":
                 return {
-                    title: "Thoughts",
-                    content: "Read my thoughts, articles, and written works on various topics."
+                    title: "Features",
+                    content: (
+                        <div className="space-y-8">
+                            {featureItems.map((item) => (
+                                <FeatureItem key={item.id} item={item} />
+                            ))}
+                        </div>
+                    )
+                };
+            case "about":
+                return {
+                    title: "About",
+                    content: <About />
                 };
             default:
                 return {
-                    title: "Welcome",
-                    content: "Select a category from the navigation above to explore my content."
+                    title: "About",
+                    content: <About />
                 };
         }
     };

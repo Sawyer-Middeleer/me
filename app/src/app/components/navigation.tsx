@@ -10,9 +10,9 @@ interface NavigationProps {
 export default function Navigation({ selectedItem, onItemSelect }: NavigationProps) {
     const menuItems = [
         { id: "about", label: "About Me" },
-        { id: "work", label: "Work" },
+        { id: "experience", label: "Experience" },
         { id: "creations", label: "Creations" },
-        { id: "writing", label: "Writing" }
+        { id: "features", label: "Features" }
     ];
 
     const handleItemClick = (itemId: string) => {

@@ -1,4 +1,4 @@
-const resumeItems = [
+const experienceItems = [
     {
         id: 1,
         title: "Founding Chief of Staff & Head of Operations",
@@ -73,7 +73,7 @@ const resumeItems = [
     },
     {
         id: 6,
-        title: "Portfolio Management",
+        title: "Analyst",
         company: "Mullins Company",
         website: "https://mullinsinc.com/",
         description: "Managed diligence, pre-construction and construction for $100M CRE portfolio.",
@@ -86,4 +86,4 @@ const resumeItems = [
     }
 ]
 
-export default resumeItems;
+export default experienceItems;
