@@ -1,5 +1,8 @@
 "use client";
 
+import ResumeItem from "./content/resume-item";
+import resumeItems from "../content/work";
+
 interface ContentBoxProps {
     selectedItem: string;
 }
@@ -10,7 +13,13 @@ export default function ContentBox({ selectedItem }: ContentBoxProps) {
             case "work":
                 return {
                     title: "Work",
-                    content: "Here you'll find my professional work, projects, and career highlights."
+                    content: (
+                        <div className="space-y-8">
+                            {resumeItems.map((item) => (
+                                <ResumeItem key={item.id} item={item} />
+                            ))}
+                        </div>
+                    )
                 };
             case "creations":
                 return {
@@ -19,7 +28,7 @@ export default function ContentBox({ selectedItem }: ContentBoxProps) {
                 };
             case "writing":
                 return {
-                    title: "Writing",
+                    title: "Thoughts",
                     content: "Read my thoughts, articles, and written works on various topics."
                 };
             default:
@@ -30,12 +39,17 @@ export default function ContentBox({ selectedItem }: ContentBoxProps) {
         }
     };
 
-    const { title, content } = getContent();
+    const { content } = getContent();
 
     return (
-        <div className="max-w-2xl mx-auto text-center">
-            <h1 className="text-3xl font-bold mb-4">{title}</h1>
-            <p className="text-lg text-gray-600 dark:text-gray-300">{content}</p>
+        <div className="w-full px-64 py-16">
+            {typeof content === 'string' ? (
+                <div className="text-center">
+                    <p className="text-lg text-gray-600 dark:text-gray-300">{content}</p>
+                </div>
+            ) : (
+                content
+            )}
         </div>
     );
 }
