@@ -7,6 +7,7 @@ import CreationItem from "./content/creation-item";
 import creationItems from "../content/creations";
 import FeatureItem from "./content/feature-item";
 import featureItems from "../content/features";
+import { BentoGrid } from "./ui/bento-grid";
 
 interface ContentBoxProps {
     selectedItem: string;
@@ -30,11 +31,11 @@ export default function ContentBox({ selectedItem }: ContentBoxProps) {
                 return {
                     title: "Creations",
                     content:  (
-                        <div className="space-y-8">
+                        <BentoGrid>
                             {creationItems.map((item) => (
                                 <CreationItem key={item.id} item={item} />
                             ))}
-                        </div>
+                        </BentoGrid>
                     )
                 };
             case "features":
