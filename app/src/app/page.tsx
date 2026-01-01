@@ -4,17 +4,27 @@ const links = [
   {
     href: "https://www.linkedin.com/in/sawyer-middeleer/",
     label: "LinkedIn",
-    icon: "fa-brands fa-linkedin",
-  },
-  {
-    href: "https://github.com/Sawyer-Middeleer",
-    label: "GitHub",
-    icon: "fa-brands fa-github",
+    svgIcon: "/linkedin.svg",
   },
   {
     href: "https://x.com/sawyermidddd",
     label: "X",
-    icon: "fa-brands fa-x-twitter",
+    svgIcon: "/x.svg",
+  },
+  {
+    href: "https://github.com/Sawyer-Middeleer",
+    label: "GitHub",
+    svgIcon: "/github.svg",
+  },
+  {
+    href: "https://www.revi.systems",
+    label: "Revi Systems",
+    svgIcon: "/orbit.svg",
+  },
+  {
+    href: "https://www.duet.so",
+    label: "Duet",
+    svgIcon: "/eclipse.svg",
   },
   {
     href: "https://cal.com/sawyer-revi-systems/30min",
