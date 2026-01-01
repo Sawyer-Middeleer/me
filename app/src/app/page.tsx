@@ -60,17 +60,13 @@ export default function Home() {
               rel={link.href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
               className="flex items-center gap-2 px-4 py-2 border border-current rounded-full text-sm hover:bg-white/10 transition-colors"
             >
-              {link.icon ? (
-                <i className={link.icon} />
-              ) : (
-                <Image
-                  src={link.svgIcon!}
-                  alt=""
-                  width={16}
-                  height={16}
-                  className="dark:invert"
-                />
-              )}
+              <Image
+                src={link.svgIcon}
+                alt=""
+                width={16}
+                height={16}
+                className="dark:invert"
+              />
               <span>{link.label}</span>
             </a>
           ))}
