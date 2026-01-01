@@ -30,7 +30,7 @@ const links = [
 
 export default function Home() {
   return (
-    <div className="font-sans flex items-center justify-center min-h-screen p-8 pt-16 md:pt-8">
+    <div className="font-sans flex items-center justify-center min-h-screen p-8 pb-16 md:pb-8">
       <main className="flex flex-col items-center gap-6">
         <Image
           src="/sawyer-dither.png"
