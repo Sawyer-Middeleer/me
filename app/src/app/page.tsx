@@ -51,7 +51,7 @@ export default function Home() {
           priority
         />
         <h1 className="text-4xl font-bold">Hi, I&apos;m Sawyer</h1>
-        <div className="flex flex-wrap justify-center gap-3 mt-2 max-w-xs">
+        <div className="flex flex-wrap justify-center gap-3 mt-2 max-w-md">
           {links.map((link) => (
             <a
               key={link.label}
