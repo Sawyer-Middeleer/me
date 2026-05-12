@@ -27,6 +27,16 @@ const links = [
     svgIcon: "/eclipse.svg",
   },
   {
+    href: "https://www.conchi.sh",
+    label: "Conchi",
+    svgIcon: "/cloud.svg",
+  },
+  {
+    href: "https://exponential-operator.beehiiv.com",
+    label: "Exponential Operator",
+    svgIcon: "/newspaper.svg",
+  },
+  {
     href: "https://cal.com/sawyer-revi-systems/30min",
     label: "Meet",
     svgIcon: "/video.svg",
